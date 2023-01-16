@@ -6,7 +6,7 @@
     "prebuild:dev": "rimraf dist",
     "prebuild": "rimraf dist",
     "build:dev": "parcel src/index.html",
-    "build": "parcel build src/index.html",
+    "build": "parcel build src/index.html --no-source-maps",
     "prepare": "husky install"
   },
   "keywords": [],
