@@ -1,0 +1,11 @@
+@use "../variables/colors";
+@use "../variables/typography";
+
+body {
+  background-color: colors.$color-primary-cream;
+  font-family: typography.$font-family-primary, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
