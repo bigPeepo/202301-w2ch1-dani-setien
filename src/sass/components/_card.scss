@@ -1,0 +1,8 @@
+@use "../functions/functions";
+
+.card {
+  width: functions.pixelToRem(340);
+  height: functions.pixelToRem(610);
+  background-color: #fff;
+  border-radius: functions.pixelToRem(16);
+}
