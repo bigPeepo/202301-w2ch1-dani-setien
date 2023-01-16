@@ -1,8 +1,16 @@
 @use "../functions/functions";
+@use "../variables/breakpoint";
 
 .card {
   width: functions.pixelToRem(340);
   height: functions.pixelToRem(610);
   background-color: #fff;
   border-radius: functions.pixelToRem(16);
+}
+
+@media only screen and (min-width: breakpoint.$media-query-breakpoint) {
+  .card {
+    width: functions.pixelToRem(600);
+    height: functions.pixelToRem(450);
+  }
 }
