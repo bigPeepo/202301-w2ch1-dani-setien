@@ -1,5 +1,7 @@
 @use "../functions/functions";
 @use "../variables/breakpoint";
+@use "../variables/colors";
+@use "../variables/typography";
 
 .card {
   width: functions.pixelToRem(340);
@@ -20,6 +22,58 @@
 
   &__description {
     flex: 3;
+    display: flex;
+    flex-direction: column;
+    margin: 16px;
+    justify-content: space-around;
+  }
+
+  &__price-container {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding-bottom: 1rem;
+  }
+
+  &__current-price {
+    font-size: 2rem;
+    font-family: typography.$font-family-heading;
+    font-weight: 800;
+    color: colors.$color-primary-dark-cyan;
+  }
+  &__past-price {
+    font-size: 1rem;
+    color: colors.$color-neutral-dark-grayish-blue;
+    text-decoration: line-through;
+  }
+
+  &__price-button-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.text-section {
+  &__summary {
+    text-transform: uppercase;
+    font-size: functions.pixelToRem(14);
+    color: colors.$color-neutral-dark-grayish-blue;
+    font-weight: 500;
+    letter-spacing: 0.3rem;
+  }
+
+  &__heading {
+    font-family: typography.$font-family-heading;
+    font-size: functions.pixelToRem(32);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+
+  &__paragraph {
+    color: colors.$color-neutral-dark-grayish-blue;
+    font-size: functions.pixelToRem(18);
+    line-height: 1.7rem;
   }
 }
 
@@ -41,5 +95,19 @@
     &__description {
       flex: 1;
     }
+  }
+}
+
+.button {
+  background-color: colors.$color-primary-dark-cyan;
+  padding: 0.7rem;
+  border: 0;
+  border-radius: 0.4rem;
+  flex: 1;
+  color: #fff;
+  font-size: 1rem;
+
+  > .fa-solid {
+    margin-right: 0.6rem;
   }
 }

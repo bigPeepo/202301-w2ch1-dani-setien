@@ -1,4 +1,9 @@
-$font-family-primary: "Montserrat";
-$font-family-secondary: "Fraunces";
+@import url("../node_modules/@fontsource/fraunces/index.css");
+@import url("../node_modules/@fortawesome/fontawesome-free/css/all.css");
+
+$font-family-paragraph: "Montserrat";
+$font-family-heading: "Fraunces";
 
 $font-size-paragraph: 14px;
+
+$font-icon: "Icomoon";
