@@ -6,11 +6,40 @@
   height: functions.pixelToRem(610);
   background-color: #fff;
   border-radius: functions.pixelToRem(16);
+  display: flex;
+  flex-direction: column;
+
+  &__image {
+    background-image: url("img/image-product-desktop.jpg");
+    background-size: functions.pixelToRem(340);
+    background-position: functions.pixelToRem(340);
+    flex: 2;
+    border-top-left-radius: functions.pixelToRem(16);
+    border-top-right-radius: functions.pixelToRem(16);
+  }
+
+  &__description {
+    flex: 3;
+  }
 }
 
 @media only screen and (min-width: breakpoint.$media-query-breakpoint) {
   .card {
     width: functions.pixelToRem(600);
     height: functions.pixelToRem(450);
+    flex-direction: row;
+
+    &__image {
+      background-size: functions.pixelToRem(320);
+      background-position: functions.pixelToRem(320);
+      border-top-right-radius: 0;
+      border-top-left-radius: functions.pixelToRem(12);
+      border-bottom-left-radius: functions.pixelToRem(12);
+      flex: 1;
+    }
+
+    &__description {
+      flex: 1;
+    }
   }
 }
